@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 当前工程的父模块坐标 start-->
+    <groupId>com.grant.go</groupId>
+    <artifactId>go</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 当前工程的父模块坐标 end-->
+
+    <!-- 项目名称 start-->
+    <name>go</name>
+    <!-- 项目名称 end-->
+
+    <!--项目描述 start-->
+    <description>learn more</description>
+    <!--项目描述 end-->
+
+    <!-- 聚合项目的父模块，打包类型指定为pom start-->
+    <packaging>pom</packaging>
+    <!-- 聚合项目的父模块，打包类型指定为pom end-->
+
+    <!-- springboot版本信息 start-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!-- springboot版本信息 end-->
+
+    <properties>
+        <!-- jdk版本 start-->
+        <java.version>1.8</java.version>
+        <!-- jdk版本 end-->
+
+        <!--spring cloud 版本 start-->
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <!--spring cloud 版本 end-->
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 标识 SpringCloud 的版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- 配置远程仓库 -->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>
