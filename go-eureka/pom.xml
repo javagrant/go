@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 继承自父模块 start-->
+    <parent>
+        <artifactId>go</artifactId>
+        <groupId>com.grant.go</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <!-- 继承自父模块 end-->
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 子模块信息 start -->
+    <artifactId>go-eureka</artifactId>
+
+    <!-- 显示设置为jar (父模块的打包方式为pom) start-->
+    <packaging>jar</packaging>
+    <!-- 显示设置为jar (父模块的打包方式为pom) end-->
+
+    <!-- 显示设置版本 start-->
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 显示设置版本 end-->
+
+    <!-- 子模块信息 end -->
+
+
+
+    <!-- eureka server: 提供服务发现与服务注册 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--
+        SpringBoot的Maven插件, 能够以Maven的方式为应用提供SpringBoot的支持，可以将
+        SpringBoot应用打包为可执行的jar或war文件, 然后以通常的方式运行SpringBoot应用
+     -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

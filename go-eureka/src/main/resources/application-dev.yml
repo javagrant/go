@@ -1,0 +1,22 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: go-eureka
+
+# eureka 相关配置
+eureka:
+  instance:
+    # 主机名
+    hostname: localhost
+    # eureka客户端
+  client:
+    # 是否从eureka server中获取信息,默认为true
+    # 如果为单节点，应该设置为false（因为不需要从其他节点同步数据）
+    fetch-registry: false
+    # 是否将自己注册到eureka server中 默认为true
+    # 如果为单节点，应该设置为false
+    register-with-eureka: false
+    # 设置eureka所在地址（注册、查询服务）
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

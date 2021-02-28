@@ -7,6 +7,13 @@
     <groupId>com.grant.go</groupId>
     <artifactId>go</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
+    <!--此处为maven子模块在创建时自动生成 start-->
+    <modules>
+        <module>go-eureka</module>
+    </modules>
+    <!--此处为maven子模块在创建时自动生成 end-->
+
     <!-- 当前工程的父模块坐标 end-->
 
     <!-- 项目名称 start-->
@@ -25,7 +32,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.3</version>
+        <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <!-- springboot版本信息 end-->
@@ -42,17 +49,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
